@@ -1,0 +1,113 @@
+@font-face {
+  font-family: gw2Font;
+  src: url("src/font/GWTwoFont.ttf");
+}
+
+/* hero background image */
+.bgimage {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.bgimage:before {
+  content: "";
+  background: url("src/imagens/background.jpg");
+  background-size: cover;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  opacity: 0.6;
+}
+
+.hero_title {
+  font-size: 4.5rem;
+}
+.hero_desc {
+  font-size: 2rem;
+}
+.hero-text {
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #5af78e;
+  font-family: gw2Font;
+}
+
+.container-fluid {
+  opacity: 1;
+}
+
+/* Sobre */
+.imageAboutPage {
+  width: 100%;
+}
+
+/* navbar */
+.navbarScroll.navbarDark {
+  background-color: #242424;
+}
+
+.navbar-toggler-icon {
+  background-image: url("src/imagens/nav_icon.png");
+}
+
+.navbar .navbar-nav .nav-link {
+  color: #53e282;
+}
+
+.navbar-brand {
+  color: #53e282;
+}
+
+/* containers */
+.card-img-top {
+  width: 100px;
+}
+
+.card-body {
+  background-color: #242424;
+  color: #d3d7d9;
+}
+
+.card-text {
+  min-height: 5rem;
+  color: #d3d7d9;
+}
+
+#contato {
+  padding-bottom: 2rem;
+}
+
+.card-title {
+  font-family: gw2Font;
+  text-align: center;
+}
+
+#sobre,
+#portfolio,
+#contato {
+  margin-top: 1rem;
+  padding-top: 1rem;
+}
+
+h1 {
+  color: #53e282;
+  font-family: gw2Font;
+}
+
+section {
+  color: #d3d7d9;
+}
+
+.btn.btn-success {
+  background-color: #53e28396;
+}
+/* habilidades */
