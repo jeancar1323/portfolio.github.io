@@ -56,10 +56,7 @@ function SendEmail() {
 }
 
 function setarBarra(barra) {}
-var isPlay = true;
-function carregar() {
-  document.getElementById("musica").play();
-}
+var isPlay = false;
 
 function PlayOrPauseMusic(obj) {
   if (isPlay) {
