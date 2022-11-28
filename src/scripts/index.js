@@ -56,3 +56,18 @@ function SendEmail() {
 }
 
 function setarBarra(barra) {}
+var isPlay = true;
+function carregar() {
+  document.getElementById("musica").play();
+}
+
+function PlayOrPauseMusic(obj) {
+  if (isPlay) {
+    obj.text = "Tocar Musica";
+    document.getElementById("musica").pause();
+  } else {
+    obj.text = "Parar Musica";
+    document.getElementById("musica").play();
+  }
+  isPlay = !isPlay;
+}

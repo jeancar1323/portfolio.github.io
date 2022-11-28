@@ -13,7 +13,9 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
     <title>Jean Portfolio</title>
   </head>
-  <body style="background-color: #121212 ;">
+  <body  onload="carregar()" style="background-color: #121212 ;">
+    <!-- <embed src="src/Music/gw2 A World Without You.mp3" loop="true" autostart="true"> -->
+    
     <!-- minha nav bar -->
     <nav class="navbar navbar-expand-lg fixed-top navbarScroll">
       <div class="container">
@@ -30,7 +32,7 @@
         >
           <span class="navbar-toggler-icon" ></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <div  class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav ms-auto">
             <li class="nav-item">
               <a class="nav-link" href="#sobre">Sobre</a>
@@ -43,6 +45,10 @@
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#contato">Contato</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link"  id="music" onclick="PlayOrPauseMusic(this)">Parar Musica</a>
+              <audio   id="musica" src="src/Music/gw2 A World Without You.mp3"  height="0px" width="0px">
             </li>
           </ul>
         </div>
@@ -69,36 +75,141 @@
           <h1 class="text-center">Sobre mim</h1>
           <div class="row mt-4">
               <div class="col-lg-4">
-                  <img src="images/about.jpeg" class= "imageAboutPage" alt="">
+                  <img src="src/imagens/EU.jpg" class= "imageAboutPage" alt="">
               </div>
               <div class="col-lg-8">
                   <div class="row mt-3">
                       <div class="col-md-6">
                           <ul>
                               <li>Nome: Jean Carlos Sampaio</li>
-                              <li>Data nascimento: ??/??/????</li>
+                              <li>Data nascimento: 26/05/1993</li>
                               <li>Cargo Atual: Analista e desenvolvedor RPA</li>
 
                           </ul>
                       </div>               
                   </div>
+                  <h4 >Trajetória  e Formação</h4>
                   <div class="row mt-3">
-                      <p> Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
-                          Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+                      <p> Inicie minha trajetória no desenvolvimento cursando o curso técnico em informática pela etec Elias Miguel júnior em Votorantim, ao finalizar la, consegui meu emprego como desenvolvedor júnior c# em uma start up chamada Black Yellow box, onde pela necessidade da start up precisei aprender Android, assim ganhando conhecimento no desenvolvimento mobile, depois da jornada de quase 3 anos nela, criei a minha própria empresa de desenvolvimento Gisul company com mais dois sócios, onde continuei a desenvolver android, e inicie o desenvolvimento backend, atualmente curso curso de analise de desenvolvimento na FATEC de Sorocaba, e estagiei na empresa MV3 como desenvolvedor RPA, hoje estou já estou na empresa como Analista e desenvolvedor RPA. 
                       </p>
+                  </div>
+                  <div >
+                    <div class="mt-4">
+                      <a href="https://www.facebook.com/jean.carlos.sampaio.13/" target="_blank"><img class="linksIcons" src="src/imagens/face.png"></a>
+                      <a href="https://www.linkedin.com/in/jean-carlos-sampaio-753756143/" target="_blank"><img class="linksIcons" src="src/imagens/linkedin.png"></a>                  
+                      <a href="https://gisulcompany.com/index.php" target="_blank"><img class="linksIcons" src="src/imagens/gisul.png"></a> 
                   </div>
               </div>
           </div>
     </section>
-    <!-- habilidades -->
-    <section id="habilidades"
-    >
+
     
-  
-  
+    <!-- habilidades -->
+    
+    <section id="habilidades">
+      <div class="container mt-4">
+          <h1 class="text-center">Habilidades</h1>
+          <h5 class="text-center">Linguagens, ferramentas e frameworks que possuo conhecimentos</h5>
+          <div class="row">
+            <!-- Android studio -->
+            <div class="col-lg-4 mt-4">
+              <div class="card skillContent">               
+                  <div class="card-body">
+                    <img class="rounded mx-auto d-block " src="src/imagens/android.png" alt="icon" style="width:20%;"  >
+                      <br>            
+                      <h4 class="card-title">Android Studio</h4>
+                      <p class="card-text">Ambiente de desenvolvimento integrado (IDE) para desenvolver para a plataforma Android.</p>                    
+                  </div>
+              </div>
+          </div>
+            <!-- C# -->
+            <div class="col-lg-4 mt-4">
+              <div class="card skillContent">               
+                  <div class="card-body">
+                    <img class="rounded mx-auto d-block " src="src/imagens/csharp.png" alt="icon" style="width:20%;"  >
+                      <br>            
+                      <h4 class="card-title">C#</h4>
+                      <p class="card-text">Linguagem de programação orientada a objetos e orientada a componentes.</p>                    
+                  </div>
+              </div>
+          </div>
+              <!-- Ui Path -->
+              <div class="col-lg-4 mt-4">
+                <div class="card skillContent">               
+                    <div class="card-body">
+                      <img class="rounded mx-auto d-block " src="src/imagens/upath.png" alt="icon" style="width:20%;"  >
+                        <br>            
+                        <h4 class="card-title">Ui Path</h4>
+                        <p class="card-text">Ferramenta para desenvolvimento de robôs para automação.</p>                    
+                    </div>
+                </div>
+            </div>
+          </div>
+          <div class="row">
+            <!-- node -->
+            <div class="col-lg-4 mt-4">
+              <div class="card skillContent">               
+                  <div class="card-body">
+                    <img class="rounded mx-auto d-block " src="src/imagens/node.png" alt="icon" style="width:20%;"  >
+                      <br>            
+                      <h4 class="card-title">Node Js</h4>
+                      <p class="card-text">Ambiente de execução JavaScript assíncrono orientado a eventos, projetado para desenvolvimento de aplicações escaláveis de rede.</p>                    
+                  </div>
+              </div>
+            </div>
+            <!-- Power Auto -->
+            <div class="col-lg-4 mt-4">
+              <div class="card skillContent">               
+                  <div class="card-body">
+                    <img class="rounded mx-auto d-block " src="src/imagens/pw.png" alt="icon" style="width:20%;"  >
+                      <br>            
+                      <h4 class="card-title">Power Automate</h4>
+                      <p class="card-text">Serviço para criar fluxos de trabalho automatizados entre aplicativos e serviços.</p>                    
+                  </div>
+              </div>
+            </div>
+            <!-- Nest js-->
+            <div class="col-lg-4 mt-4">
+              <div class="card skillContent">               
+                  <div class="card-body">
+                    <img class="rounded mx-auto d-block " src="src/imagens/nest.png" alt="icon" style="width:20%;"  >
+                      <br>            
+                      <h4 class="card-title">Nest Js</h4>
+                      <p class="card-text">Framework back-end que auxilia o desenvolvimento de aplicações eficientes, escaláveis e confiáveis em cima do Node. js.</p>                    
+                  </div>
+              </div>
+            </div>                 
+          </div>
+          <div class="row">
+            <!-- type -->
+            <div class="col-lg-4 mt-4">
+              <div class="card skillContent">               
+                  <div class="card-body">
+                    <img class="rounded mx-auto d-block " src="src/imagens/tp.png" alt="icon" style="width:20%;"  >
+                      <br>            
+                      <h4 class="card-title">Type Script</h4>
+                      <p class="card-text">Linguagem de código aberto que foi construída em cima do Javascript, foi criado para adicionar recursos de tipagem estáticas à linguagem original.</p>                    
+                  </div>
+              </div>
+            </div>
+            <!-- My sql -->
+            <div class="col-lg-4 mt-4">
+              <div class="card skillContent">               
+                  <div class="card-body">
+                    <img class="rounded mx-auto d-block " src="src/imagens/mysql.png" alt="icon" style="width:20%;"  >
+                      <br>            
+                      <h4 class="card-title">My Sql</h4>
+                      <p class="card-text">Sistema de gerenciamento de banco de dados (SGBD) relacional</p>                    
+                  </div>
+              </div>
+            </div>
+                        
+          </div>
+    </div>
+    
+
+              
   </section>
-
-
 
     <!-- Potfolio -->
     <section id="portfolio">
@@ -121,7 +232,7 @@
             <!-- calculadora react native -->
               <div class="col-lg-4 mt-4">
                   <div class="card portfolioContent">
-                      <img class="card-img-top" src="src/imagens/uipath.png" alt="Card image" style="width:100%">
+                      <img class="card-img-top" src="src/imagens/calc.png" alt="Card image" style="width:100%">
                       <div class="card-body">
                           <h4 class="card-title">Calculadora</h4>
                           <p class="card-text">Uma calculadora feita em React Native
@@ -213,5 +324,9 @@
       </div>
   </section>
     <script src="src/scripts/index.js"></script>
+    <!-- <embed src="src/Music/gw2 A World Without You.mp3" loop="true" autostart="true" height="0px" width="0px"> -->
   </body>
 </html>
+
+
+ 

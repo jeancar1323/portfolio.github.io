@@ -61,6 +61,7 @@
 
 .navbar .navbar-nav .nav-link {
   color: #53e282;
+  cursor: pointer;
 }
 
 .navbar-brand {
@@ -75,6 +76,10 @@
 .card-body {
   background-color: #242424;
   color: #d3d7d9;
+}
+
+.skillContent {
+  background-color: #242424;
 }
 
 .card-text {
@@ -111,3 +116,12 @@ section {
   background-color: #53e28396;
 }
 /* habilidades */
+
+/* links */
+.linksIcons {
+  width: 5%;
+  margin: 2px;
+}
+.fab {
+  color: #000000;
+}
